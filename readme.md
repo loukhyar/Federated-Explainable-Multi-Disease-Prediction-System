@@ -153,10 +153,7 @@ streamlit run app.py
 
 ## 🚀 Deployment
 
-Recommended:
-
-* Streamlit Cloud (fastest)
-* Render (better production feel)
+* Streamlit Cloud 
 
 ---
 

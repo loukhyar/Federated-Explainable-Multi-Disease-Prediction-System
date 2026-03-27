@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 # PAGE CONFIG
 # =========================
 
-st.set_page_config(page_title="Federated Multi Disease Prediction", layout="wide")
+st.set_page_config(page_title="Federated Explainable Multi-Disease Prediction System", layout="wide")
 
 # =========================
 # GLOBAL STYLE
@@ -123,24 +123,28 @@ if "logged_in" not in st.session_state or st.session_state.logged_in == False:
 # =========================
 
 with st.sidebar:
-    st.title("🩺 Health AI Panel")
-
-    st.write("AI-Powered Medical Prediction")
+    st.markdown("## 🩺 Health AI Panel")
+    st.write("✨ Smart Healthcare Assistant")
 
     st.markdown("---")
-    st.info("Select disease and enter patient details to generate prediction.")
-    st.markdown("---")
 
-    st.success("System Status: Online")
+    st.info("🔍 Select a disease and enter patient details")
 
-    st.markdown("### Quick Guide")
-    st.write("""
-    1. Select a disease  
-    2. Enter patient parameters  
-    3. Click **Predict**  
-    4. Review AI explanations
+    st.markdown("### 🌟 Features")
+
+    st.markdown("""
+    💜 Multi-Disease Prediction  
+    🔬 Explainable AI (SHAP + LIME)  
+    📊 Risk Analysis Dashboard  
+    🏥 Medical Recommendations  
     """)
 
+    st.markdown("---")
+
+    st.success("🟢 System Active")
+
+    st.markdown("### 💡 Tip")
+    st.write("Provide accurate inputs for better predictions ✨")
 # =========================
 # TOP BAR
 # =========================
@@ -151,19 +155,18 @@ with top3:
     if st.button("Logout"):
         st.session_state.logged_in = False
         st.session_state.user = None
-        st.switch_page("pages/Login.py")
+        st.switch_page("Login.py")
 
 # =========================
 # TITLE
 # =========================
 
 st.markdown("""
-<h1>🩺 Federated Multi-Disease Prediction System</h1>
+<h1>🩺 Healthcare AI Dashboard</h1>
 <p style='text-align:center;color:#666;font-size:18px'>
-AI-Powered Healthcare Risk Assessment Platform
+Your intelligent assistant for disease prediction & analysis 💜
 </p>
 """, unsafe_allow_html=True)
-
 # =========================
 # FEATURE CARDS
 # =========================
@@ -195,6 +198,10 @@ with col3:
     """, unsafe_allow_html=True)
 
 st.write("")
+st.markdown(
+"<p style='text-align:center;color:#777;font-size:14px;'>✨ Powered by Explainable AI • Built for smarter healthcare decisions</p>",
+unsafe_allow_html=True
+)
 
 # =========================
 # SELECT DISEASE
@@ -410,6 +417,10 @@ if model is not None and input_df is not None:
         st.dataframe(summary, use_container_width=True)
 
         st.info("⚕️ AI predictions are for educational purposes only.")
+        st.markdown(
+"<p style='color:#6c58c4;font-weight:500;'>💡 Tip: Always consult a medical professional for real diagnosis</p>",
+unsafe_allow_html=True
+)
 
         # =========================
         # SHAP

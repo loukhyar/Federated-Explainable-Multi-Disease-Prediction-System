@@ -6,7 +6,7 @@ A privacy-aware, AI-powered healthcare prediction platform that supports **multi
 
 ## 🚀 Live Demo
 
-https://federated-explainable-multi-disease-prediction-system-dzedo4eq.streamlit.app/
+[https://federated-explainable-multi-disease-prediction-system-dzedo4eq.streamlit.app/](https://federated-explainable-multi-disease-prediction-system-8g2hrb26.streamlit.app/)
 
 ---
 

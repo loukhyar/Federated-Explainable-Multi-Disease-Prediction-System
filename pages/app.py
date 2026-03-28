@@ -155,7 +155,7 @@ with top3:
     if st.button("Logout"):
         st.session_state.logged_in = False
         st.session_state.user = None
-        st.switch_page("Login.py")
+        st.switch_page("login.py")
 
 # =========================
 # TITLE

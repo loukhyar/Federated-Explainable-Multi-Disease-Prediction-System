@@ -60,7 +60,7 @@ if "logged_in" not in st.session_state:
 # AUTO REDIRECT
 # =========================
 if st.session_state.logged_in:
-    st.switch_page("pages/App.py")
+    st.switch_page("pages/app.py")
 
 # =========================
 # SIDEBAR (UPGRADED 💜)
@@ -129,7 +129,7 @@ with tab1:
             st.session_state.user = username
 
             st.success("Login successful ✅")
-            st.switch_page("pages/App.py")
+            st.switch_page("pages/app.py")
         else:
             st.error("Invalid credentials")
 
